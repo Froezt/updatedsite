@@ -1,0 +1,585 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    background-image: url("../images/achtergrond.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #919191;
+}
+
+
+
+.topnav {
+    margin-top: 0px;
+    padding: 28px;
+    text-align: right;
+    font-family: Raleway;
+    box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.28);
+    z-index: 3;
+    background-color: white;
+}
+
+.kopje {
+    transition: 0.4s;
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 0 10px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+
+.topnav .icon {
+    display: none;
+    border: 0;
+}
+
+.dropdown {
+    float: right;
+}
+
+/*hier maak ik de dropdown aan door de kopjes zichtbaar te maken zodra je over de "organisatie" knop hovert. */
+.dropdown .dropbtn {
+    transition: 0.4s;
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 0 10px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.dropdown-content {
+    transition: 0.4s;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 20px;
+    transition: 2s;
+}
+
+.dropdown-content a {
+    transition: 0.4s;
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.kopje:nth-child(2):hover,
+.kopje:nth-child(4):hover,
+.kopje:nth-child(6):hover,
+.dropdown-content a:first-child:hover {
+    background-color: rgba(21, 139, 213, 1);
+    color: white;
+    padding: 28px 10px;
+    font-weight: bold;
+}
+
+.kopje:first-child:hover,
+.kopje:nth-child(3):hover,
+.kopje:nth-child(5):hover,
+.dropdown-content a:nth-child(2):hover,
+.dropdown a:hover {
+    background-color: rgba(223, 148, 4, 1);
+    color: white;
+    padding: 28px 10px;
+    font-weight: bold;
+}
+
+#active:hover {
+    padding: 26px 10px;
+    background-color: black;
+    color: white;
+}
+
+.dropdown-content a:hover {
+    transition: 0.4s;
+    background-color: rgba(223, 148, 4, 1);
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    transition: 0.4s;
+    display: block;
+}
+
+/*hier word de navigatie balk responsive gemaakt, als eerste laat die alleen het eerste kopje zien door alle andere kopjes op display none te zetten, daarna zorgt hij dat het hamburger menu zichtbaar is. Verder heb ik er met een java onclick functie voor gezorgd dat de content van de navigatie balk zichtbaar word zodra er op het menu word geklikt. Dit heb ik gedaan door "responsive" aan de classnaam toe te voegen. */
+@media (max-width: 1200px) {
+
+    .topnav a:not(:first-child),
+    .dropdown .dropbtn {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+        border: 0;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        border: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .topnav.responsive .dropdown {
+        float: none;
+        display: block;
+    }
+
+    .topnav.responsive .dropdown-content {
+        position: relative;
+        display: block;
+    }
+
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+
+
+}
+
+a.icon {
+    display: none;
+    color: black;
+    float: right;
+    border: 0;
+}
+
+.logo {
+    transition: 3s;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    height: 60px;
+}
+
+.logo:hover {
+    transition: 4s;
+    transform: rotate(3600deg);
+}
+
+h1 {
+    position: absolute;
+    margin-left: 4em;
+    top: 0.4em;
+    font-size: 17px;
+    font-family: sans-serif, Arial;
+}
+
+
+#active {
+    border-bottom: solid 2px rgba(223, 148, 4, 1);
+    border-top: solid 2px rgba(21, 139, 213, 1);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    position: inherit;
+}
+
+.square {
+    width: 60vw;
+    height: 500px;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 10px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+article h2 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    font-family: Helvetica;
+    color: #575757;
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+
+article p, article a {
+    margin-left: 6vw;
+    margin-right: 4vw;
+    font-family: Helvetica;
+    color: #575757;
+    font-size: 0.9em;
+    width: 45vw;
+}
+
+@media (min-width: 1200px) {
+
+    article p,
+    footer {
+        font-size: 0.9em;
+    }
+
+    article h2 {
+        font-size: 22px;
+    }
+
+    .naam {
+        font-size: 20px;
+        margin-left: 4em;
+        margin-top: 0.4em;
+    }
+}
+
+
+.expertgrid {
+    display: grid;
+    grid-template-columns: 18em 18em 18em;
+    grid-template-rows: 16em 16em 16em 16em;
+    grid-gap: 120px 20px;
+    width: 60vw;
+    height: 1600px;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 6vw;
+    box-shadow: 4px 10px 6px 0px rgba(0, 0, 0, 0.5);
+    justify-content: space-evenly;
+}
+
+.secretariaatgrid {
+    display: grid;
+    grid-template-columns: 18em 18em;
+    grid-template-rows: 16em;
+    grid-gap: 120px 20px;
+    width: 60vw;
+    height: 500px;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 6vw;
+    box-shadow: 4px 10px 6px 0px rgba(0, 0, 0, 0.5);
+    justify-content: space-evenly;
+}
+
+.expertgrid div img,
+.secretariaatgrid div img {
+    margin-top: 3em;
+    margin-bottom: 0,5em;
+    margin-left: 3em;
+    width: 9.5em;
+}
+
+.expertgrid div p,
+.secretariaatgrid div p {
+    margin-left: 3em;
+    font-family: Arial;
+    width: 10em;
+}
+
+.dienstsquare {
+    width: 60vw;
+    height: 540px;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 10px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+.klachtenregelingsquare {
+    width: 60vw;
+    height: 800px;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 10px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+.bezoeksquare {
+    width: 60vw;
+    height: 1700px;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 10px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-family: Helvetica;
+}
+
+/* hier maak ik de grids responsive doormiddel van mediaqueries.*/
+@media (max-width: 1450px) {
+    .expertgrid {
+        grid-template-columns: 18em 18em;
+        grid-template-rows: 16em 16em 16em 16em 16em 16em;
+        height: 2350px;
+    }
+
+    .klachtenregelingsquare {
+        height: 800px
+    }
+
+    .bezoeksquare {
+        height: 1900px;
+    }
+}
+
+@media (max-width: 950px) {
+    .expertgrid {
+        grid-template-columns: 18em;
+        grid-template-rows: 16em 16em 16em 16em 16em 16em 16em 16em 16em 16em 16em 16em;
+        height: 4600px;
+    }
+
+    .klachtenregelingsquare {
+        height: 950px;
+    }
+
+    .bezoeksquare {
+        height: 2000px;
+    }
+
+    .secretariaatgrid {
+        grid-template-columns: 18em;
+        grid-template-rows: 16em 16em;
+        height: 750px;
+    }
+    .bezoeksquare {
+        width: 70vw;
+    }
+    
+    .square {
+        width: 70vw;
+    }
+    
+    .klachtenregelingsquare {
+        width: 70vw;
+    }
+    
+    .dienstsquare {
+        width: 70vw;
+        height: 650px;
+    }
+}
+
+@media (max-width: 600px) {
+    .expertgrid {
+        grid-template-columns: 18em;
+        grid-template-rows: 16em 16em 16em 16em 16em 16em 16em 16em 16em 16em 16em 16em;
+        width: 70vw;
+    }
+
+    .expertgrid div img {
+        margin-left: 3em;
+    }
+
+    .bezoeksquare {
+        height: 3150px;
+    }
+
+    .klachtenregelingsquare {
+        height: 1150px;
+    }
+    
+    .dienstsquare {
+        height: 700px;
+    }
+}
+
+
+
+input {
+    border-radius: 5px;
+    border: solid grey 2px;
+    margin-bottom: 0.5em;
+    font-family: Helvetica;
+}
+
+input:valid {
+    border: solid lightgreen 2px;
+}
+
+fieldset {
+    border-radius: 25px;
+    border: none;
+    margin-left: 5vw;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Raleway;
+}
+
+.textfield {
+    width: 20vw;
+    height: 2em;
+}
+
+textarea {
+    resize: none;
+    border: solid grey 2px;
+    border-radius: 5px;
+    width: 40vw;
+}
+
+textarea:valid {
+    border: solid lightgreen 2px;
+}
+
+#stuurknop {
+    transition: 0.5s;
+    background-color: #095fd9;
+    color: white;
+    height: 3em;
+    width: 10em;
+    border: none;
+    border-radius: 0px;
+    font-weight: bold;
+    font-family: Helvetica;
+    font-size: 14px;
+}
+
+#stuurknop:hover {
+    background-color: rgba(21, 139, 213, 1);
+    cursor: pointer;
+}
+
+@media (max-width: 650px) {
+    .textfield {
+        width: 40vw;
+    }
+}
+
+h3 {
+    font-weight: bold;
+    margin-left: 6vw;
+    margin-right: 4vw;
+    font-family: Helvetica;
+    color: #575757;
+    font-size: 1em;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: rgba(21, 139, 213, 0.7);
+    justify-content: space-around;
+}
+
+footer p,
+footer a {
+    color: white;
+    font-family: Helvetica;
+}
+
+footer img {
+    width: 7em;
+    height: 5em;
+    margin-top: 0.5em;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 960px) {
+
+    footer p,
+    footer a {
+        font-size: 0.7em;
+    }
+}
+
+.flex {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    height: 18.55em
+}
+
+.flexdiensten {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    height: 16.05em;
+}
+
+.flexrest {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    height: 13em;
+}
+
+.linksbutton {
+    transition: 0.5s;
+    color: white;
+    font-weight: bold;
+    font-family: Raleway;
+    padding: 0.5em 1em 0.5em 0.9em;
+    background-color: rgba(223, 148, 4, 1);
+    text-decoration: none;
+    margin-top: 1em;
+    margin-left: 1em;
+    position: absolute;
+    text-align: center;
+}
+
+.linksbutton:hover {
+    transition: 0.5s;
+    background-color: rgba(235, 177, 66, 1);
+}
+
+.links {
+    margin-top: 4vw;
+    font-family: Helvetica;
+    color: #575757;
+    font-size: 1.1em;
+    margin-left: 8vw;
+    width: 500px;
+}
+
+@media (max-width: 1700) {
+    .links {
+        font-size: 0.1em;
+    }
+}
+
+
