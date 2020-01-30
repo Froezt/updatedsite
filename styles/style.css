@@ -229,7 +229,7 @@ article h2 {
     margin-right: 4vw;
 }
 
-article p, article a {
+article p {
     margin-left: 6vw;
     margin-right: 4vw;
     font-family: Helvetica;
@@ -266,7 +266,7 @@ article p, article a {
     height: 1600px;
     z-index: 5;
     background-color: rgba(255, 255, 255, 0.9);
-    margin-top: 6vw;
+    margin-top: 6em;
     box-shadow: 4px 10px 6px 0px rgba(0, 0, 0, 0.5);
     justify-content: space-evenly;
 }
@@ -280,7 +280,7 @@ article p, article a {
     height: 500px;
     z-index: 5;
     background-color: rgba(255, 255, 255, 0.9);
-    margin-top: 6vw;
+    margin-top: 6em;
     box-shadow: 4px 10px 6px 0px rgba(0, 0, 0, 0.5);
     justify-content: space-evenly;
 }
@@ -531,14 +531,14 @@ footer div {
     position: relative;
     display: flex;
     align-items: flex-end;
-    height: 18.55em
+    height: 19.55em
 }
 
 .flexdiensten {
     position: relative;
     display: flex;
     align-items: flex-end;
-    height: 16.05em;
+    height: 17.05em;
 }
 
 .flexrest {
